@@ -1,0 +1,218 @@
+/usr/local/lib/python3.10/dist-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/usr/local/lib/python3.10/dist-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda9SetDeviceEi'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+The following values were not passed to `accelerate launch` and had defaults used instead:
+	`--num_processes` was set to a value of `1`
+	`--num_machines` was set to a value of `1`
+	`--mixed_precision` was set to a value of `'no'`
+	`--dynamo_backend` was set to a value of `'no'`
+To avoid this warning pass in values for each of the problematic parameters or run `accelerate config`.
+2023-11-02 20:29:13.786163: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-11-02 20:29:13.786227: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-11-02 20:29:13.786280: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-11-02 20:29:15.023600: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/usr/local/lib/python3.10/dist-packages/torchvision/io/image.py:13: UserWarning: Failed to load image Python extension: '/usr/local/lib/python3.10/dist-packages/torchvision/image.so: undefined symbol: _ZN3c104cuda9SetDeviceEi'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+prepare tokenizers
+Downloading (…)olve/main/vocab.json: 100% 961k/961k [00:00<00:00, 2.96MB/s]
+Downloading (…)olve/main/merges.txt: 100% 525k/525k [00:00<00:00, 2.13MB/s]
+Downloading (…)cial_tokens_map.json: 100% 389/389 [00:00<00:00, 2.65MB/s]
+Downloading (…)okenizer_config.json: 100% 905/905 [00:00<00:00, 6.31MB/s]
+Downloading (…)olve/main/vocab.json: 100% 862k/862k [00:00<00:00, 5.14MB/s]
+Downloading (…)olve/main/merges.txt: 100% 525k/525k [00:00<00:00, 2.10MB/s]
+Downloading (…)cial_tokens_map.json: 100% 389/389 [00:00<00:00, 2.45MB/s]
+Downloading (…)okenizer_config.json: 100% 904/904 [00:00<00:00, 6.63MB/s]
+Using DreamBooth method.
+prepare images.
+found directory /content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px contains 61 image files
+No caption file found for 61 images. Training will continue without captions for these images. If class token exists, it will be used. / 61枚の画像にキャプションファイルが見つかりませんでした。これらの画像についてはキャプションなしで学習を続行します。class tokenが存在する場合はそれを使います。
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/000543771_896x598_c.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/000_32D37CP-e1656149834438.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/000_33DV897.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/000_33YY96N.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/001348762_896x598_c.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px/090662720142-web-tete.jpg... and 56 more
+found directory /content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2 contains 61 image files
+No caption file found for 61 images. Training will continue without captions for these images. If class token exists, it will be used. / 61枚の画像にキャプションファイルが見つかりませんでした。これらの画像についてはキャプションなしで学習を続行します。class tokenが存在する場合はそれを使います。
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/000543771_896x598_c.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/000_32D37CP-e1656149834438.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/000_33DV897.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/000_33YY96N.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/001348762_896x598_c.jpg
+/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2/090662720142-web-tete.jpg... and 56 more
+12200 train images with repeating.
+0 reg images.
+no regularization images / 正則化画像が見つかりませんでした
+[Dataset 0]
+  batch_size: 1
+  resolution: (512, 512)
+  enable_bucket: True
+  min_bucket_reso: 256
+  max_bucket_reso: 2048
+  bucket_reso_steps: 64
+  bucket_no_upscale: True
+
+  [Subset 0 of Dataset 0]
+    image_dir: "/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_512px"
+    image_count: 61
+    num_repeats: 100
+    shuffle_caption: False
+    keep_tokens: 0
+    caption_dropout_rate: 0.0
+    caption_dropout_every_n_epoches: 0
+    caption_tag_dropout_rate: 0.0
+    caption_prefix: None
+    caption_suffix: None
+    color_aug: False
+    flip_aug: False
+    face_crop_aug_range: None
+    random_crop: False
+    token_warmup_min: 1,
+    token_warmup_step: 0,
+    is_reg: False
+    class_tokens: elisabeth_borne_512px
+    caption_extension: .caption
+
+  [Subset 1 of Dataset 0]
+    image_dir: "/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px/100_elisabeth_borne_2"
+    image_count: 61
+    num_repeats: 100
+    shuffle_caption: False
+    keep_tokens: 0
+    caption_dropout_rate: 0.0
+    caption_dropout_every_n_epoches: 0
+    caption_tag_dropout_rate: 0.0
+    caption_prefix: None
+    caption_suffix: None
+    color_aug: False
+    flip_aug: False
+    face_crop_aug_range: None
+    random_crop: False
+    token_warmup_min: 1,
+    token_warmup_step: 0,
+    is_reg: False
+    class_tokens: elisabeth_borne_2
+    caption_extension: .caption
+
+
+[Dataset 0]
+loading image sizes.
+100% 122/122 [00:25<00:00,  4.83it/s]
+make buckets
+min_bucket_reso and max_bucket_reso are ignored if bucket_no_upscale is set, because bucket reso is defined by image size automatically / bucket_no_upscaleが指定された場合は、bucketの解像度は画像サイズから自動計算されるため、min_bucket_resoとmax_bucket_resoは無視されます
+number of images (including repeats) / 各bucketの画像枚数（繰り返し回数を含む）
+bucket 0: resolution (512, 512), count: 12200
+mean ar error (without repeats): 0.0
+preparing accelerator
+loading model for process 0/1
+load StableDiffusion checkpoint: /content/sample_data/sd_xl_base_1.0.safetensors
+building U-Net
+loading U-Net from checkpoint
+U-Net:  <All keys matched successfully>
+building text encoders
+loading text encoders from checkpoint
+text encoder 1: <All keys matched successfully>
+text encoder 2: <All keys matched successfully>
+building VAE
+loading VAE from checkpoint
+VAE: <All keys matched successfully>
+Enable xformers for U-Net
+import network module: networks.lora
+[Dataset 0]
+caching latents.
+checking cache validity...
+100% 122/122 [00:00<00:00, 822676.99it/s]
+caching latents...
+100% 122/122 [00:11<00:00, 10.86it/s]
+create LoRA network. base dim (rank): 8, alpha: 1.0
+neuron dropout: p=None, rank dropout: p=None, module dropout: p=None
+create LoRA for Text Encoder 1:
+create LoRA for Text Encoder 2:
+create LoRA for Text Encoder: 264 modules.
+create LoRA for U-Net: 722 modules.
+enable LoRA for text encoder
+enable LoRA for U-Net
+prepare optimizer, data loader etc.
+False
+
+===================================BUG REPORT===================================
+/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/cuda_setup/main.py:166: UserWarning: Welcome to bitsandbytes. For bug reports, please run
+
+python -m bitsandbytes
+
+
+  warn(msg)
+================================================================================
+The following directories listed in your path were found to be non-existent: {PosixPath('/usr/local/lib/python3.10/dist-packages/cv2/../../lib64')}
+/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/cuda_setup/main.py:166: UserWarning: /usr/local/lib/python3.10/dist-packages/cv2/../../lib64:/usr/lib64-nvidia did not contain ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] as expected! Searching further paths...
+  warn(msg)
+The following directories listed in your path were found to be non-existent: {PosixPath('module'), PosixPath('//ipykernel.pylab.backend_inline')}
+The following directories listed in your path were found to be non-existent: {PosixPath('--logtostderr --listen_host=172.28.0.12 --target_host=172.28.0.12 --tunnel_background_save_url=https'), PosixPath('//colab.research.google.com/tun/m/cc48301118ce562b961b3c22d803539adc1e0c19/gpu-v100-hm-21fiv9wtbgna7 --tunnel_background_save_delay=10s --tunnel_periodic_background_save_frequency=30m0s --enable_output_coalescing=true --output_coalescing_required=true')}
+The following directories listed in your path were found to be non-existent: {PosixPath('/datalab/web/pyright/typeshed-fallback/stdlib,/usr/local/lib/python3.10/dist-packages')}
+The following directories listed in your path were found to be non-existent: {PosixPath('/sys/fs/cgroup/memory.events /var/colab/cgroup/jupyter-children/memory.events')}
+The following directories listed in your path were found to be non-existent: {PosixPath('/env/python')}
+The following directories listed in your path were found to be non-existent: {PosixPath('//172.28.0.1'), PosixPath('http'), PosixPath('8013')}
+CUDA_SETUP: WARNING! libcudart.so not found in any environmental path. Searching in backup paths...
+/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/cuda_setup/main.py:166: UserWarning: Found duplicate ['libcudart.so', 'libcudart.so.11.0', 'libcudart.so.12.0'] files: {PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0'), PosixPath('/usr/local/cuda/lib64/libcudart.so')}.. We select the PyTorch default libcudart.so, which is {torch.version.cuda},but this might missmatch with the CUDA version that is needed for bitsandbytes.To override this behavior set the BNB_CUDA_VERSION=<version string, e.g. 122> environmental variableFor example, if you want to use the CUDA version 122BNB_CUDA_VERSION=122 python ...OR set the environmental variable in your .bashrc: export BNB_CUDA_VERSION=122In the case of a manual override, make sure you set the LD_LIBRARY_PATH, e.g.export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda-11.2
+  warn(msg)
+DEBUG: Possible options found for libcudart.so: {PosixPath('/usr/local/cuda/lib64/libcudart.so.11.0'), PosixPath('/usr/local/cuda/lib64/libcudart.so')}
+CUDA SETUP: PyTorch settings found: CUDA_VERSION=117, Highest Compute Capability: 7.0.
+CUDA SETUP: To manually override the PyTorch CUDA version please see:https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/cuda_setup/main.py:166: UserWarning: WARNING: Compute capability < 7.5 detected! Only slow 8-bit matmul is supported for your GPU!                     If you run into issues with 8-bit matmul, you can try 4-bit quantization: https://huggingface.co/blog/4bit-transformers-bitsandbytes
+  warn(msg)
+CUDA SETUP: Required library version not found: libbitsandbytes_cuda117_nocublaslt.so. Maybe you need to compile it from source?
+CUDA SETUP: Defaulting to libbitsandbytes_cpu.so...
+
+================================================ERROR=====================================
+CUDA SETUP: CUDA detection failed! Possible reasons:
+1. You need to manually override the PyTorch CUDA version. Please see: "https://github.com/TimDettmers/bitsandbytes/blob/main/how_to_use_nonpytorch_cuda.md
+2. CUDA driver not installed
+3. CUDA not installed
+4. You have multiple conflicting CUDA libraries
+5. Required library not pre-compiled for this bitsandbytes release!
+CUDA SETUP: If you compiled from source, try again with `make CUDA_VERSION=DETECTED_CUDA_VERSION` for example, `make CUDA_VERSION=113`.
+CUDA SETUP: The CUDA version for the compile might depend on your conda install. Inspect CUDA version via `conda list | grep cuda`.
+================================================================================
+
+CUDA SETUP: Something unexpected happened. Please compile from source:
+git clone https://github.com/TimDettmers/bitsandbytes.git
+cd bitsandbytes
+CUDA_VERSION=117 make cuda11x_nomatmul
+python setup.py install
+CUDA SETUP: Setup Failed!
+Traceback (most recent call last):
+  File "/content/kohya_ss/./sdxl_train_network.py", line 176, in <module>
+    trainer.train(args)
+  File "/content/kohya_ss/train_network.py", line 325, in train
+    optimizer_name, optimizer_args, optimizer = train_util.get_optimizer(args, trainable_params)
+  File "/content/kohya_ss/library/train_util.py", line 3410, in get_optimizer
+    import bitsandbytes as bnb
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/__init__.py", line 6, in <module>
+    from . import cuda_setup, utils, research
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/research/__init__.py", line 1, in <module>
+    from . import nn
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/research/nn/__init__.py", line 1, in <module>
+    from .modules import LinearFP8Mixed, LinearFP8Global
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/research/nn/modules.py", line 8, in <module>
+    from bitsandbytes.optim import GlobalOptimManager
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/optim/__init__.py", line 6, in <module>
+    from bitsandbytes.cextension import COMPILED_WITH_CUDA
+  File "/usr/local/lib/python3.10/dist-packages/bitsandbytes-0.41.0-py3.10.egg/bitsandbytes/cextension.py", line 20, in <module>
+    raise RuntimeError('''
+RuntimeError: 
+        CUDA Setup failed despite GPU being available. Please run the following command to get more information:
+
+        python -m bitsandbytes
+
+        Inspect the output of the command and see if you can locate CUDA libraries. You might need to add them
+        to your LD_LIBRARY_PATH. If you suspect a bug, please take the information from python -m bitsandbytes
+        and open an issue at: https://github.com/TimDettmers/bitsandbytes/issues
+Traceback (most recent call last):
+  File "/usr/local/bin/accelerate", line 8, in <module>
+    sys.exit(main())
+  File "/usr/local/lib/python3.10/dist-packages/accelerate/commands/accelerate_cli.py", line 47, in main
+    args.func(args)
+  File "/usr/local/lib/python3.10/dist-packages/accelerate/commands/launch.py", line 994, in launch_command
+    simple_launcher(args)
+  File "/usr/local/lib/python3.10/dist-packages/accelerate/commands/launch.py", line 636, in simple_launcher
+    raise subprocess.CalledProcessError(returncode=process.returncode, cmd=cmd)
+subprocess.CalledProcessError: Command '['/usr/bin/python3', './sdxl_train_network.py', '--enable_bucket', '--min_bucket_reso=256', '--max_bucket_reso=2048', '--pretrained_model_name_or_path=/content/sample_data/sd_xl_base_1.0.safetensors', '--train_data_dir=/content/drive/MyDrive/AI_PICS/training/elisabeth_borne_512px', '--resolution=512,512', '--output_dir=/content/drive/MyDrive/AI_PICS/Lora', '--network_alpha=1', '--save_model_as=safetensors', '--network_module=networks.lora', '--text_encoder_lr=5e-05', '--unet_lr=0.0001', '--network_dim=8', '--output_name=ZabethSdxl', '--lr_scheduler_num_cycles=1', '--no_half_vae', '--learning_rate=0.0001', '--lr_scheduler=cosine', '--lr_warmup_steps=1220', '--train_batch_size=1', '--max_train_steps=12200', '--save_every_n_epochs=1', '--mixed_precision=fp16', '--save_precision=fp16', '--cache_latents', '--optimizer_type=AdamW8bit', '--max_data_loader_n_workers=0', '--bucket_reso_steps=64', '--xformers', '--bucket_no_upscale', '--noise_offset=0.0']' returned non-zero exit status 1

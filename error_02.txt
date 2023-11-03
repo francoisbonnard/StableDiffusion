@@ -1,0 +1,9 @@
+ImportError: cannot import name 'StableDiffusionXLPipeline' from 'diffusers' 
+(/usr/local/lib/python3.10/dist-packages/diffusers/__init__.py)
+
+
+
+
+from huggingface_hub import notebook_login
+notebook_login()
+-> 'HfApi' object has no attribute '_is_valid_token'

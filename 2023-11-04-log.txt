@@ -1,0 +1,39 @@
+pply lowram patch
+/content/stable-diffusion-webui
+WEBUI ARGUMENTS: --gradio-img2img-tool color-sketch --enable-insecure-extension-access --gradio-queue --share  --gradio-auth a:a  --disable-model-loading-ram-optimization --opt-sdp-no-mem-attention
+Python 3.10.12 (main, Jun 11 2023, 05:26:28) [GCC 11.4.0]
+Version: v1.6.0
+Commit hash: 5ef669de080814067961f28357256e8fe27544f4
+Launching Web UI with arguments: --gradio-img2img-tool color-sketch --enable-insecure-extension-access --gradio-queue --share --gradio-auth a:a --disable-model-loading-ram-optimization --opt-sdp-no-mem-attention
+2023-11-04 11:34:05.388547: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-11-04 11:34:05.388596: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-11-04 11:34:05.388647: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-11-04 11:34:06.410059: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+Traceback (most recent call last):
+  File "/content//stable-diffusion-webui/launch.py", line 48, in <module>
+    main()
+  File "/content//stable-diffusion-webui/launch.py", line 44, in main
+    start()
+  File "/content/stable-diffusion-webui/modules/launch_utils.py", line 432, in start
+    import webui
+  File "/content/stable-diffusion-webui/webui.py", line 13, in <module>
+    initialize.imports()
+  File "/content/stable-diffusion-webui/modules/initialize.py", line 21, in imports
+    import gradio  # noqa: F401
+  File "/usr/local/lib/python3.10/dist-packages/gradio/__init__.py", line 3, in <module>
+    import gradio.components as components
+  File "/usr/local/lib/python3.10/dist-packages/gradio/components/__init__.py", line 1, in <module>
+    from gradio.components.annotated_image import AnnotatedImage
+  File "/usr/local/lib/python3.10/dist-packages/gradio/components/annotated_image.py", line 12, in <module>
+    from gradio import utils
+  File "/usr/local/lib/python3.10/dist-packages/gradio/utils.py", line 353, in <module>
+    class AsyncRequest:
+  File "/usr/local/lib/python3.10/dist-packages/gradio/utils.py", line 372, in AsyncRequest
+    client = httpx.AsyncClient()
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1397, in __init__
+    self._transport = self._init_transport(
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_client.py", line 1445, in _init_transport
+    return AsyncHTTPTransport(
+  File "/usr/local/lib/python3.10/dist-packages/httpx/_transports/default.py", line 275, in __init__
+    self._pool = httpcore.AsyncConnectionPool(
+TypeError: AsyncConnectionPool.__init__() got an unexpected keyword argument 'socket_options'
